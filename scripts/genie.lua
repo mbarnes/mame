@@ -90,6 +90,7 @@ newoption {
 		{ "os2",           "OS/2 eComStation"       },
 		{ "haiku",         "Haiku"                  },
 		{ "solaris",       "Solaris SunOS"          },
+		{ "rpi",           "Raspberry Pi"           },
 	},
 }
 

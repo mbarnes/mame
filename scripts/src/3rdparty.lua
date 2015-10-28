@@ -509,6 +509,11 @@ project "portmidi"
 			"PMALSA=1",
 		}
 
+	configuration { "rpi" }
+		defines {
+			"PMALSA=1",
+		}
+
 	configuration { }
 
 	files {
@@ -525,7 +530,7 @@ project "portmidi"
 		}
 	end
 
-	if _OPTIONS["targetos"]=="linux" then
+	if _OPTIONS["targetos"]=="linux" or _OPTIONS["targetos"]=="rpi" then
 		files {
 			MAME_DIR .. "3rdparty/portmidi/pm_linux/pmlinux.c",
 			MAME_DIR .. "3rdparty/portmidi/pm_linux/pmlinuxalsa.c",

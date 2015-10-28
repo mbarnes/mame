@@ -319,6 +319,9 @@ function toolchain(_buildDir, _subDir)
 		end
 
 		if "rpi" == _OPTIONS["gcc"] then
+			premake.gcc.cc  = "arm-linux-gnueabihf-gcc"
+			premake.gcc.cxx = "arm-linux-gnueabihf-g++"
+			premake.gcc.ar  = "arm-linux-gnueabihf-ar"
 			location (_buildDir .. "projects/" .. _subDir .. "/".. _ACTION .. "-rpi")
 		end
 
@@ -871,6 +874,20 @@ function toolchain(_buildDir, _subDir)
 	configuration { "rpi" }
 		targetdir (_buildDir .. "rpi" .. "/bin")
 		objdir (_buildDir .. "rpi" .. "/obj")
+			libdirs {
+				"/usr/arm-linux-gnueabihf/lib",
+			}
+			includedirs {
+				"/usr/arm-linux-gnueabihf/include",
+			}
+			-- Libraries built with dpkg-cross:
+			--   asound
+			links {
+				"c",
+				"dl",
+				"pthread",
+				"asound",
+			}
 
 	configuration { "os2" }
 		objdir (_buildDir .. "os2" .. "/obj")

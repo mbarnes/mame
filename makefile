@@ -14,7 +14,7 @@
 
 # REGENIE = 1
 # VERBOSE = 1
-# NOWERROR = 1
+NOWERROR = 1
 
 # TARGET = mame
 # SUBTARGET = tiny
@@ -69,11 +69,11 @@
 # MACOSX_USE_LIBSDL = 1
 # CYGWIN_BUILD = 1
 
-# TARGETOS = windows
-# CROSS_BUILD = 1
-# OVERRIDE_CC = cc
-# OVERRIDE_CXX = c++
-# OVERRIDE_LD = ld
+TARGETOS = rpi
+CROSS_BUILD = 1
+OVERRIDE_CC = arm-linux-gnueabihf-gcc
+OVERRIDE_CXX = arm-linux-gnueabihf-g++
+OVERRIDE_LD = arm-linux-gnueabihf-ld
 
 # DEPRECATED = 1
 # LTO = 1
@@ -110,7 +110,8 @@ ifeq ($(OS),Windows_NT)
 OS := windows
 GENIEOS := windows
 else
-UNAME := $(shell uname -mps)
+#UNAME := $(shell uname -mps)
+UNAME := Linux armv7l unknown
 GENIEOS := linux
 ifeq ($(firstword $(filter Linux,$(UNAME))),Linux)
 OS := linux
@@ -1059,6 +1060,17 @@ os2: os2_x86
 .PHONY: os2_x86
 os2_x86: generate $(PROJECTDIR)/gmake-os2/Makefile
 	$(SILENT) $(MAKE) -C $(PROJECTDIR)/gmake-os2 config=$(CONFIG)32
+
+#-------------------------------------------------
+# gmake-rpi  (Raspberry Pi cross-compiled)
+#-------------------------------------------------
+
+$(PROJECTDIR)/gmake-rpi/Makefile: makefile $(SCRIPTS) $(GENIE)
+	$(SILENT) $(GENIE) $(PARAMS) --gcc=rpi --gcc_version=$(GCC_VERSION) gmake
+
+.PHONY: rpi
+rpi: generate $(PROJECTDIR)/gmake-rpi/Makefile
+	$(SILENT) $(MAKE) $(MAKEPARAMS) -C $(PROJECTDIR)/gmake-rpi config=$(CONFIG)
 
 
 #-------------------------------------------------
