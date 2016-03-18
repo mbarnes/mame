@@ -34,13 +34,13 @@ jobs:
             cc: gcc
             cxx: g++
             archopts: -U_FORTIFY_SOURCE
-            subtarget: tiny
-            executable: mametiny
+            subtarget: cocktail
+            executable: mamecocktail
           - compiler: clang
             cc: clang
             cxx: clang++
-            subtarget: mame
-            executable: mame
+            subtarget: cocktail
+            executable: mamecocktail
     steps:
     - uses: actions/checkout@main
       with:
