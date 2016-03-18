@@ -1,0 +1,49 @@
+/******************************************************************************
+
+    cocktail.lst
+
+    List of all enabled drivers for a vertically-oriented cocktail-style
+    arcade cabinet.
+
+    This file is parsed by makelist.py, sorted, and output as C code
+    describing the drivers.
+
+******************************************************************************/
+
+
+amidar            // Amidar [1982]
+btime             // Burger Time (Data East set 1) [1982]
+carnival          // Carnival (upright) [1980]
+carnivalc         // Carnival (cocktail) [1980]
+commando          // Commando (World) [1985]
+congo             // Congo Bongo (Rev C, 2 board stack) [1983]
+digdug            // Dig Dug (rev 2) [1982]
+digdug2           // Dig Dug II (New Ver.) [1985]
+dkong             // Donkey Kong (US set 1) [1981]
+dkong3            // Donkey Kong 3 (US) [1983]
+dkongjr           // Donkey Kong Junior (US set F-2) [1982]
+docastle          // Mr. Do's Castle (set 1) [1983]
+frogger           // Frogger [1981]
+galaga            // Galaga (Namco rev. B) [1981]
+galaxian          // Galaxian (Namco set 1) [1979]
+gaplus            // Gaplus (GP2 rev. B) [1984]
+gyruss            // Gyruss [1983]
+jackal            // Jackal (World, 8-way Joystick) [1986]
+jrpacman          // Jr. Pac-Man (11/9/83) [1983]
+ladybug           // Lady Bug [1981]
+mappy             // Mappy (US) [1983]
+mrdo              // Mr. Do! [1982]
+mspacman          // Ms. Pac-Man [1981]
+pacman            // Pac-Man (Midway) [1980]
+pacplus           // Pac-Man Plus [1982]
+pengo             // Pengo (set 1 rev c) [1982]
+pooyan            // Pooyan [1982]
+puckman           // Puck Man (Japan set 1) [1980]
+qbert             // Q*bert (US set 1) [1982]
+superpac          // Super Pac-Man [1982]
+timeplt           // Time Pilot [1982]
+tp84              // Time Pilot '84 (set 1) [1984]
+zaxxon            // Zaxxon (set 1) [1982]
+
+// Pick up atari_vg machine, needed by galaga.cpp
+centiped          // Centipede (revision 3) [1980]
