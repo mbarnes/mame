@@ -17,8 +17,8 @@
 # NOWERROR = 1
 # IGNORE_GIT = 1
 
-# TARGET = mame
-# SUBTARGET = tiny
+TARGET = mame
+SUBTARGET = cocktail
 # TOOLS = 1
 # EMULATOR = 1
 # TESTS = 1
