@@ -1,0 +1,62 @@
+/******************************************************************************
+
+    cocktail.lst
+
+    List of all enabled drivers for a vertically-oriented cocktail-style
+    arcade cabinet.
+
+    This file is parsed by makelist.py, sorted, and output as C code
+    describing the drivers.
+
+******************************************************************************/
+
+
+1942              // 1942 (Revision B)
+amidar            // Amidar [1982]
+bagman            // Bagman [1982]
+btime             // Burger Time (Data East set 1) [1982]
+carnivalc         // Carnival (cocktail) [1980]
+centiped          // Centipede (revision 3) [1980]
+circusc           // Circus Charlie (level select, set 1) [1984]
+commando          // Commando (World) [1985]
+congo             // Congo Bongo (Rev C, 2 board stack) [1983]
+contra            // Contra (US, set 1) [1987]
+digdug            // Dig Dug (rev 2) [1982]
+digdug2           // Dig Dug II (New Ver.) [1985]
+dkong             // Donkey Kong (US set 1) [1981]
+dkong3            // Donkey Kong 3 (US) [1983]
+dkongjr           // Donkey Kong Junior (US set F-2) [1982]
+docastle          // Mr. Do's Castle (set 1) [1983]
+frogger           // Frogger [1981]
+galaga            // Galaga (Namco rev. B) [1981]
+galaga88          // Galaga '88 [1987]
+galaxian          // Galaxian (Namco set 1) [1979]
+gaplus            // Gaplus (GP2 rev. B) [1984]
+gorf              // Gorf [1981]
+gyruss            // Gyruss [1983]
+invaders          // Space Invaders / Space Invaders M [1978]
+jackal            // Jackal (World, 8-way Joystick) [1986]
+journey           // Journey [1983]
+jrpacman          // Jr. Pac-Man (11/9/83) [1983]
+kickc             // Kick (cocktail) [1981]
+ladybug           // Lady Bug [1981]
+mappy             // Mappy (US) [1983]
+milliped          // Millipede [1982]
+mrdo              // Mr. Do! [1982]
+mspacman          // Ms. Pac-Man [1981]
+pacman            // Pac-Man (Midway) [1980]
+pacmania          // Pac-Mania [1987]
+pacnpal           // Pac & Pal [1983]
+pacplus           // Pac-Man Plus [1982]
+pengo             // Pengo (set 1 rev c) [1982]
+phoenix           // Phoenix (Amstar) [1980]
+pooyan            // Pooyan [1982]
+puckman           // Puck Man (Japan set 1) [1980]
+qbert             // Q*bert (US set 1) [1982]
+qix               // Qix (Rev 2) [1981]
+quantum           // Quantum (rev 2) [1982]
+superpac          // Super Pac-Man [1982]
+timeplt           // Time Pilot [1982]
+tp84              // Time Pilot '84 (set 1) [1984]
+xevious           // Xevious (Namco)
+zaxxon            // Zaxxon (set 1) [1982]
