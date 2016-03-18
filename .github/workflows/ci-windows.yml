@@ -21,7 +21,7 @@ jobs:
         TOOLS: 1
       run: make -j2
     - name: Validate
-      run: ./mame64 -validate
+      run: ./mamecocktail64 -validate
     - uses: actions/upload-artifact@master
       with:
         name: mame64-windows-gcc-${{ github.sha }}
@@ -49,7 +49,7 @@ jobs:
       run: msbuild "build\projects\windows\mame\vs2019\mame.sln" /m:2 /p:ContinueOnError=false /p:StopOnFirstFailure=true /property:Configuration=Release /property:Platform=x64
     - name: Validate
       shell: cmd
-      run: mame64 -validate
+      run: mamecocktail64 -validate
     - uses: actions/upload-artifact@master
       with:
         name: mame64-windows-msvc-${{ github.sha }}

@@ -31,9 +31,10 @@ jobs:
           OVERRIDE_CXX: ${{ matrix.cxx }}
           ARCHOPTS: ${{ matrix.archopts }}
           TOOLS: 1
+          NO_USE_XINPUT: 1
         run: make -j2
       - name: Validate
-        run: ./mame64 -validate
+        run: ./mamecocktail64 -validate
       - uses: actions/upload-artifact@master
         with:
           name: mame64-linux-${{ matrix.compiler }}-${{ github.sha }}
