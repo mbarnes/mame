@@ -1,0 +1,197 @@
+/******************************************************************************
+
+    cocktail.lst
+
+    List of all enabled drivers for a vertically-oriented cocktail-style
+    arcade cabinet.
+
+    This is not an automatically generated file, and it should be manually
+    updated when new driver is added.
+
+******************************************************************************/
+
+@source:capcom/1942.cpp
+1942              // 1942 (Revision B) [1984]
+
+@source:capcom/1943.cpp
+1943u             // 1943: The Battle of Midway (US, Rev C) [1987]
+
+@source:sunelectronics/arabian.cpp
+arabiana          // Arabian (Atari) [1983]
+
+@source:midway/astrocde.cpp
+gorf              // Gorf [1981]
+
+@source:atari/atarisy1.cpp
+marble            // Marble Madness (set 1) [1984]
+
+@source:valadon/bagman.cpp
+bagman            // Bagman [1982]
+sbagman           // Super Bagman (version 5)
+
+@source:jaleco/blueprnt.cpp
+blueprnt          // Blue Print (Midway) [1982]
+
+@source:tecmo/bombjack.cpp
+bombjack          // Bomb Jack (set 1) [1984]
+
+@source:dataeast/btime.cpp
+bnjm              // Bump 'n' Jump (Midway) [1982]
+btimem            // Burger Time (Midway) [1982]
+
+@source:itech/capbowl.cpp
+capbowl           // Capcom Bowling (set 1) [1988]
+
+@source:atari/centiped.cpp
+centiped3         // Centipede (revision 3) [1980]
+milliped          // Millipede [1982]
+
+@source:konami/circusc.cpp
+circusc           // Circus Charlie (level select, set 1) [1984]
+
+@source:capcom/commando.cpp
+commando          // Commando (World) [1985]
+
+@source:konami/contra.cpp
+contra            // Contra (US / Asia, set 1) [1987]
+
+@source:nintendo/dkong.cpp
+dkong             // Donkey Kong (US set 1) [1981]
+dkong3            // Donkey Kong 3 (US) [1983]
+dkongjr           // Donkey Kong Junior (US set F-2) [1982]
+dkongx            // Donkey Kong II: Jumpman Returns (hack, V1.2) [2006]
+
+@source:nintendo/vsnes.cpp
+goonies           // Vs. The Goonies (set E) [1986]
+
+@source:universal/docastle.cpp
+docastle          // Mr. Do's Castle (set 1) [1983]
+jjack             // Jumping Jack [1984]
+
+@source:namco/galaga.cpp
+digdug            // Dig Dug (rev 2) [1982]
+galaga            // Galaga (Namco rev. B) [1981]
+xevious           // Xevious (Namco)
+
+@source:galaxian/galaxian.cpp
+amidar            // Amidar [1982]
+frogger           // Frogger [1981]
+galaxian          // Galaxian (Namco set 1) [1979]
+scobras           // Super Cobra (Stern Electronics) [1981]
+
+@source:namco/gaplus.cpp
+gaplus            // Gaplus (GP2 rev. B) [1984]
+
+@source:gottlieb/gottlieb.cpp
+mplanets          // Mad Planets [1983]
+qbert             // Q*bert (US set 1) [1982]
+
+@source:konami/gyruss.cpp
+gyruss            // Gyruss [1983]
+
+@source:konami/jackal.cpp
+jackal            // Jackal (World, 8-way Joystick) [1986]
+
+@source:pacman/jrpacman.cpp
+jrpacman          // Jr. Pac-Man (11/9/83) [1983]
+jrpacmanf         // Jr. Pac-Man (speedup hack) [1983]
+
+@source:konami/junofrst.cpp
+junofrst          // Juno First [1983]
+
+@source:sunelectronics/kangaroo.cpp
+kangarooa         // Kangaroo (Atari) [1982]
+
+@source:universal/ladybug.cpp
+ladybug           // Lady Bug [1981]
+
+@source:irem/m52.cpp
+mpatrolw          // Moon Patrol (Williams) [1982]
+
+@source:namco/mappy.cpp
+digdug2           // Dig Dug II (New Ver.) [1985]
+grobda            // Grobda (New Ver.) [1984]
+mappy             // Mappy (US) [1983]
+motos             // Motos [1985]
+pacnpal           // Pac & Pal [1983]
+superpacm         // Super Pac-Man (Midway) [1982]
+todruaga          // The Tower of Druaga (New Ver.) [1984]
+
+@source:midway/mcr.cpp
+journey           // Journey [1983]
+kickc             // Kick (cocktail) [1981]
+shollow           // Satan's Hollow (set 1) [1981]
+solarfox          // Solar Fox (upright) [1981]
+
+@source:universal/mrdo.cpp
+mrdo              // Mr. Do! [1982]
+
+@source:midw8080/mw8080bw.cpp
+invaders          // Space Invaders / Space Invaders M [1978]
+
+@source:namco/namcos1.cpp
+galaga88          // Galaga '88 [1987]
+pacmania          // Pac-Mania [1987]
+
+@source:pacman/pacman.cpp
+maketrax          // Make Trax (US set 1)
+mspacman          // Ms. Pac-Man [1981]
+mspacmnf          // Ms. Pac-Man (speedup hack) [1981]
+pacman            // Pac-Man (Midway) [1980]
+pacmanf           // Pac-Man (Midway, speedup hack) [1980]
+pacplus           // Pac-Man Plus [1982]
+vanvan            // Van-Van Car [1983]
+
+@source:knami/pandoras.cpp
+pandoras          // Pandora's Palace [1984]
+
+@source:pacman/pengo.cpp
+pengo             // Pengo (set 1 rev C, encrypted) [1982]
+
+@source:phoenix/phoenix.cpp
+phoenix           // Phoenix (Amstar, set 1) [1980]
+pleiadce          // Pleiads (Centuri) [1981]
+
+@source:konami/pooyan.cpp
+pooyan            // Pooyan [1982]
+
+@source:taito/qix.cpp
+qix               // Qix (Rev 2) [1981]
+zookeep           // Zoo Keeper (set 1) [1982]
+
+@source:atari/quantum.cpp
+quantum           // Quantum (rev 2) [1982]
+
+@source:konami/rocnrope.cpp
+rocnrope          // Roc'n Rope [1983]
+
+@source:sega/segag80r.cpp
+astrob            // Astro Blaster (version 3) [1981]
+
+@source:konami/shaolins.cpp
+kicker            // Kicker [1985]
+
+@source:sega/system1.cpp
+upndown           // Up'n Down (315-5030) [1983]
+
+@source:atari/tempest.cpp
+tempest           // Tempest (rev 3, Revised Hardware) [1980]
+
+@source:konami/timeplt.cpp
+timeplt           // Time Pilot [1982]
+
+@source:taito/tnzs.cpp
+arknoid2u         // Arkanoid - Revenge of DOH (US) [1987]
+
+@source:konami/tp84.cpp
+tp84              // Time Pilot '84 (set 1) [1984]
+
+@source:toaplan/twincobr.cpp
+fshark            // Flying Shark (World)
+
+@source:sega/vicdual.cpp
+carnivalc         // Carnival (cocktail) [1980]
+
+@source:sega/zaxxon.cpp
+congo             // Congo Bongo (Rev C, 2 board stack) [1983]
+zaxxon            // Zaxxon (set 1, rev D) [1982]
