@@ -52,13 +52,14 @@ jobs:
           OVERRIDE_CXX: ${{ matrix.cxx }}
           ARCHOPTS: ${{ matrix.archopts }}
           TOOLS: 1
+          NO_USE_XINPUT: 1
         run: make -j2
       - name: Validate
-        run: ./mame -validate
+        run: ./mamecocktail -validate
       - name: Reconcile driver list
-        run: ./mame -listxml | python scripts/build/makedep.py reconcilelist -l src/mame/mame.lst -
+        run: ./mamecocktail -listxml | python scripts/build/makedep.py reconcilelist -l src/mame/mame.lst -
       - name: ORM check
-        run: python scripts/minimaws/minimaws.py load --executable ./mame --softwarepath hash
+        run: python scripts/minimaws/minimaws.py load --executable ./mamecocktail --softwarepath hash
       - uses: actions/upload-artifact@master
         with:
           name: mame-linux-${{ matrix.compiler }}-${{ github.sha }}
