@@ -1,0 +1,147 @@
+/******************************************************************************
+
+    cocktail.lst
+
+    List of all enabled drivers for a vertically-oriented cocktail-style
+    arcade cabinet.
+
+    This file is parsed by makelist.exe, sorted, and output as C code
+    describing the drivers.
+
+******************************************************************************/
+
+@source:1942.cpp
+1942              // 1942 (Revision B) [1984]
+
+@source:astrocde.cpp
+gorf              // Gorf [1981]
+
+@source:bagman.cpp
+bagman            // Bagman [1982]
+
+@source:blueprnt.cpp
+blueprnt          // Blue Print (Midway) [1982]
+
+@source:bombjack.cpp
+bombjack          // Bomb Jack (set 1) [1984]
+
+@source:btime.cpp
+bnjm              // Bump 'n' Jump (Midway) [1982]
+btimem            // Burger Time (Midway) [1982]
+
+@source:centiped.cpp
+centiped          // Centipede (revision 4) [1980]
+milliped          // Millipede [1982]
+
+@source:circusc.cpp
+circusc           // Circus Charlie (level select, set 1) [1984]
+
+@source:command.cpp
+commando          // Commando (World) [1985]
+
+@source:contra.cpp
+contra            // Contra (US / Asia, set 1) [1987]
+
+@source:dkong.cpp
+dkong             // Donkey Kong (US set 1) [1981]
+dkong3            // Donkey Kong 3 (US) [1983]
+dkongjr           // Donkey Kong Junior (US set F-2) [1982]
+
+@source:docastle.cpp
+docastle          // Mr. Do's Castle (set 1) [1983]
+
+@source:galaga.cpp
+digdug            // Dig Dug (rev 2) [1982]
+galaga            // Galaga (Namco rev. B) [1981]
+xevious           // Xevious (Namco)
+
+@source:galaxian.cpp
+amidar            // Amidar [1982]
+frogger           // Frogger [1981]
+galaxian          // Galaxian (Namco set 1) [1979]
+
+@source:gaplus.cpp
+gaplus            // Gaplus (GP2 rev. B) [1984]
+
+@source:gottlieb.cpp
+qbert             // Q*bert (US set 1) [1982]
+
+@source:gyruss.cpp
+gyruss            // Gyruss [1983]
+
+@source:jackal.cpp
+jackal            // Jackal (World, 8-way Joystick) [1986]
+
+@source:jrpacman.cpp
+jrpacman          // Jr. Pac-Man (11/9/83) [1983]
+
+@source:junofrst.cpp
+junofrst          // Juno First [1983]
+
+@source:ladybug.cpp
+ladybug           // Lady Bug [1981]
+
+@source:m52.cpp
+mpatrolw          // Moon Patrol (Williams) [1982]
+
+@source:mappy.cpp
+digdug2           // Dig Dug II (New Ver.) [1985]
+grobda            // Grobda (New Ver.) [1984]
+mappy             // Mappy (US) [1983]
+motos             // Motos [1985]
+pacnpal           // Pac & Pal [1983]
+superpacm         // Super Pac-Man (Midway) [1982]
+todruaga          // The Tower of Druaga (New Ver.) [1984]
+
+@source:mcr.cpp
+journey           // Journey [1983]
+kickc             // Kick (cocktail) [1981]
+shollow           // Satan's Hollow (set 1) [1981]
+
+@source:mrdo.cpp
+mrdo              // Mr. Do! [1982]
+
+@source:mw8080bw.cpp
+invaders          // Space Invaders / Space Invaders M [1978]
+
+@source:namcos1.cpp
+galaga88          // Galaga '88 [1987]
+pacmania          // Pac-Mania [1987]
+
+@source:pacman.cpp
+mspacman          // Ms. Pac-Man [1981]
+pacman            // Pac-Man (Midway) [1980]
+pacplus           // Pac-Man Plus [1982]
+puckman           // Puck Man (Japan set 1) [1980]
+
+@source:pengo.cpp
+pengo             // Pengo (set 1 rev C, encrypted) [1982]
+
+@source:phoenix.cpp
+phoenix           // Phoenix (Amstar, set 1) [1980]
+
+@source:pooyan.cpp
+pooyan            // Pooyan [1982]
+
+@source:qix.cpp
+qix               // Qix (Rev 2) [1981]
+zookeep           // Zoo Keeper (set 1) [1982]
+
+@source:quantum.cpp
+quantum           // Quantum (rev 2) [1982]
+
+@source:shaolins.cpp
+kicker            // Kicker [1985]
+
+@source:timeplt.cpp
+timeplt           // Time Pilot [1982]
+
+@source:tp84.cpp
+tp84              // Time Pilot '84 (set 1) [1984]
+
+@source:vicdual.cpp
+carnivalc         // Carnival (cocktail) [1980]
+
+@source:zaxxon.cpp
+congo             // Congo Bongo (Rev C, 2 board stack) [1983]
+zaxxon            // Zaxxon (set 1, rev D) [1982]
