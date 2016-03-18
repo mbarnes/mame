@@ -38,7 +38,7 @@ jobs:
         TOOLS: 1
       run: make -j2
     - name: Validate
-      run: ./mame -validate
+      run: ./mamecocktail -validate
     - uses: actions/upload-artifact@master
       with:
         name: mame-windows-gcc-${{ github.sha }}
