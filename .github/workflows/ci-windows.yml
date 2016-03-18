@@ -35,13 +35,13 @@ jobs:
           - compiler: gcc
             cc: gcc
             cxx: g++
-            subtarget: mame
-            executable: mame
+            subtarget: cocktail
+            executable: mamecocktail
           - compiler: clang
             cc: clang
             cxx: clang++
-            subtarget: tiny
-            executable: mametiny
+            subtarget: cocktail
+            executable: mamecocktail
     steps:
     - uses: msys2/setup-msys2@v2
       with:
