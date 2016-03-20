@@ -1265,7 +1265,7 @@ endif
 #-------------------------------------------------
 
 $(PROJECTDIR)/$(MAKETYPE)-linux/Makefile: makefile $(SCRIPTS) $(GENIE)
-	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=linux-gcc --gcc_version=$(GCC_VERSION) $(MAKETYPE)
+	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=linux-gcc --gcc_version=$(GCC_VERSION) --NO_X11=1 --NO_USE_XINPUT=1 $(MAKETYPE)
 
 .PHONY: linux_x64
 linux_x64: generate $(PROJECTDIR)/$(MAKETYPE)-linux/Makefile
