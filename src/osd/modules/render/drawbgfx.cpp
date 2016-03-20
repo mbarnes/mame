@@ -77,6 +77,8 @@ uint32_t renderer_bgfx::s_current_view = 0;
 #ifdef OSD_SDL
 static void* sdlNativeWindowHandle(SDL_Window* _window)
 {
+	return nullptr;
+#if 0
 	SDL_SysWMinfo wmi;
 	SDL_VERSION(&wmi.version);
 	if (!SDL_GetWindowWMInfo(_window, &wmi))
@@ -95,6 +97,7 @@ static void* sdlNativeWindowHandle(SDL_Window* _window)
 #   elif BX_PLATFORM_EMSCRIPTEN || BX_PLATFORM_ANDROID
 	return nullptr;
 #   endif // BX_PLATFORM_
+#endif
 }
 #endif
 
@@ -120,10 +123,12 @@ int renderer_bgfx::create()
 			memset(&blank_pd, 0, sizeof(bgfx::PlatformData));
 			bgfx::setPlatformData(blank_pd);
 		}
+#if 0
 #ifdef OSD_WINDOWS
 		bgfx::winSetHwnd(window().m_hwnd);
 #else
 		bgfx::sdlSetWindow(window().sdl_window());
+#endif
 #endif
 		std::string backend(options.bgfx_backend());
 		if (backend == "auto")
