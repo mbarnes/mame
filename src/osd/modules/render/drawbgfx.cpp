@@ -125,6 +125,8 @@ renderer_bgfx::~renderer_bgfx()
 #ifdef OSD_SDL
 static void* sdlNativeWindowHandle(SDL_Window* _window)
 {
+	return nullptr;
+#if 0
 	SDL_SysWMinfo wmi;
 	SDL_VERSION(&wmi.version);
 	if (!SDL_GetWindowWMInfo(_window, &wmi))
@@ -143,6 +145,7 @@ static void* sdlNativeWindowHandle(SDL_Window* _window)
 #   elif BX_PLATFORM_EMSCRIPTEN || BX_PLATFORM_ANDROID
 	return nullptr;
 #   endif // BX_PLATFORM_
+#endif
 }
 #endif
 
