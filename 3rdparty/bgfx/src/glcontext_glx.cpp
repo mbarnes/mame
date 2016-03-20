@@ -58,6 +58,7 @@ namespace bgfx { namespace gl
 
 		m_context = (GLXContext)g_platformData.context;
 
+#if 0
 		if (NULL == g_platformData.context)
 		{
 			XLockDisplay( (::Display*)g_platformData.ndt);
@@ -179,6 +180,7 @@ namespace bgfx { namespace gl
 
 			XUnlockDisplay( (::Display*)g_platformData.ndt);
 		}
+#endif
 
 		import();
 
@@ -220,11 +222,13 @@ namespace bgfx { namespace gl
 	void GlContext::destroy()
 	{
 		glXMakeCurrent( (::Display*)g_platformData.ndt, 0, 0);
+#if 0
 		if (NULL == g_platformData.context)
 		{
 			glXDestroyContext( (::Display*)g_platformData.ndt, m_context);
 			XFree(m_visualInfo);
 		}
+#endif
 		m_context    = NULL;
 		m_visualInfo = NULL;
 	}
