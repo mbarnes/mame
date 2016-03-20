@@ -270,6 +270,7 @@ namespace bgfx
 		}
 
 		PlatformData pd;
+#if 0
 #	if BX_PLATFORM_LINUX || BX_PLATFORM_BSD
 		pd.ndt          = wmi.info.x11.display;
 		pd.nwh          = (void*)(uintptr_t)wmi.info.x11.window;
@@ -283,6 +284,7 @@ namespace bgfx
 		pd.ndt          = wmi.info.vivante.display;
 		pd.nwh          = wmi.info.vivante.window;
 #	endif // BX_PLATFORM_
+#endif
 		pd.context      = NULL;
 		pd.backBuffer   = NULL;
 		pd.backBufferDS = NULL;
