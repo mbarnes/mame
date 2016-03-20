@@ -64,6 +64,7 @@ namespace bgfx { namespace gl
 		m_context = (GLXContext)g_platformData.context;
 		m_display = (::Display*)g_platformData.ndt;
 
+#if 0
 		// It's possible the user has provided the window handle, but not
 		// the display handle. If this is the case, try opening the default
 		// display
@@ -194,6 +195,7 @@ namespace bgfx { namespace gl
 
 			XUnlockDisplay(m_display);
 		}
+#endif
 
 		import();
 
@@ -235,6 +237,7 @@ namespace bgfx { namespace gl
 	void GlContext::destroy()
 	{
 		glXMakeCurrent(m_display, 0, 0);
+#if 0
 		if (NULL == g_platformData.context)
 		{
 			glXDestroyContext(m_display, m_context);
@@ -245,6 +248,7 @@ namespace bgfx { namespace gl
 		{
 			XCloseDisplay(m_display);
 		}
+#endif
 		m_context    = NULL;
 		m_visualInfo = NULL;
 		m_display    = NULL;

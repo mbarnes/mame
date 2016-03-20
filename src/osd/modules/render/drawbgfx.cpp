@@ -146,6 +146,8 @@ inline void winSetHwnd(::HWND _window)
 #elif defined(OSD_SDL)
 static void* sdlNativeWindowHandle(SDL_Window* _window)
 {
+	return nullptr;
+#if 0
 	SDL_SysWMinfo wmi;
 	SDL_VERSION(&wmi.version);
 	if (!SDL_GetWindowWMInfo(_window, &wmi))
@@ -164,6 +166,7 @@ static void* sdlNativeWindowHandle(SDL_Window* _window)
 #   elif BX_PLATFORM_EMSCRIPTEN || BX_PLATFORM_ANDROID
 	return nullptr;
 #   endif // BX_PLATFORM_
+#endif
 }
 
 inline bool sdlSetWindow(SDL_Window* _window)
@@ -176,6 +179,7 @@ inline bool sdlSetWindow(SDL_Window* _window)
 	}
 
 	bgfx::PlatformData pd;
+#if 0
 #   if BX_PLATFORM_LINUX || BX_PLATFORM_BSD
 	pd.ndt          = wmi.info.x11.display;
 	pd.nwh          = (void*)(uintptr_t)wmi.info.x11.window;
@@ -189,6 +193,7 @@ inline bool sdlSetWindow(SDL_Window* _window)
 	pd.ndt          = wmi.info.vivante.display;
 	pd.nwh          = wmi.info.vivante.window;
 #   endif // BX_PLATFORM_
+#endif
 	pd.context      = NULL;
 	pd.backBuffer   = NULL;
 	pd.backBufferDS = NULL;
