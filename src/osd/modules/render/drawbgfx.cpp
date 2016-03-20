@@ -71,6 +71,8 @@ bool renderer_bgfx::s_window_set = false;
 #ifdef OSD_SDL
 static void* sdlNativeWindowHandle(SDL_Window* _window)
 {
+	return nullptr;
+#if 0
 	SDL_SysWMinfo wmi;
 	SDL_VERSION(&wmi.version);
 	if (!SDL_GetWindowWMInfo(_window, &wmi))
@@ -89,6 +91,7 @@ static void* sdlNativeWindowHandle(SDL_Window* _window)
 #   elif BX_PLATFORM_EMSCRIPTEN
 	return nullptr;
 #   endif // BX_PLATFORM_
+#endif
 }
 #endif
 
