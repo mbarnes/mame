@@ -233,6 +233,8 @@ inline void macSetWindow(bgfx::PlatformData &platform_data, void *_window)
 #elif defined(OSD_SDL)
 static void* sdlNativeWindowHandle(SDL_Window* _window)
 {
+	return nullptr;
+#if 0
 	SDL_SysWMinfo wmi;
 	SDL_VERSION(&wmi.version);
 	if (!SDL_GetWindowWMInfo(_window, &wmi))
@@ -249,6 +251,7 @@ static void* sdlNativeWindowHandle(SDL_Window* _window)
 #   elif BX_PLATFORM_EMSCRIPTEN || BX_PLATFORM_ANDROID
 	return nullptr;
 #   endif // BX_PLATFORM_
+#endif
 }
 
 inline bool sdlSetWindow(bgfx::PlatformData &platform_data, SDL_Window* _window)
@@ -260,16 +263,6 @@ inline bool sdlSetWindow(bgfx::PlatformData &platform_data, SDL_Window* _window)
 		return false;
 	}
 
-#   if BX_PLATFORM_LINUX || BX_PLATFORM_BSD
-	platform_data.ndt          = wmi.info.x11.display;
-	platform_data.nwh          = (void*)(uintptr_t)wmi.info.x11.window;
-#   elif BX_PLATFORM_OSX
-	platform_data.ndt          = NULL;
-	platform_data.nwh          = wmi.info.cocoa.window;
-#   elif BX_PLATFORM_WINDOWS
-	platform_data.ndt          = NULL;
-	platform_data.nwh          = wmi.info.win.window;
-#   endif // BX_PLATFORM_
 	platform_data.context      = NULL;
 	platform_data.backBuffer   = NULL;
 	platform_data.backBufferDS = NULL;
