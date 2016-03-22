@@ -164,6 +164,9 @@ public:
 
 	// FIXME: simply option handling
 	virtual void register_options();
+	
+ 	// MKCHAMP DECLARING UPDATE_HI
+ 	virtual void update_hi(bool skip_redraw);
 
 	// general overridables
 	virtual void init(running_machine &machine) override;

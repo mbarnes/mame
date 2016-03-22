@@ -213,6 +213,33 @@ void windows_osd_interface::update(bool skip_redraw)
 		debugger_update();
 }
 
+//============================================================
+//  MKCHAMP - BELOW IS THE NEW SUB CALLED FROM emu/video.c. 
+//============================================================
+
+void windows_osd_interface::update_hi(bool skip_redraw)
+{
+	// ping the watchdog on each update
+	winmain_watchdog_ping();
+
+	// if we're not skipping this redraw, update all windows
+	if (!skip_redraw)
+	{
+//      profiler_mark(PROFILER_BLIT);
+		for (win_window_info *window = win_window_list; window != NULL; window = window->m_next)
+			window->update_hi();
+//      profiler_mark(PROFILER_END);
+	}
+
+	// poll the joystick values here
+	winwindow_process_events(machine(), TRUE, FALSE);
+	wininput_poll(machine());
+	check_osd_inputs(machine());
+	// if we're running, disable some parts of the debugger
+	if ((machine().debug_flags & DEBUG_FLAG_OSD_ENABLED) != 0)
+		debugger_update();
+}
+
 
 
 

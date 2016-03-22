@@ -533,6 +533,66 @@ void video_manager::begin_recording(const char *name, movie_format format)
 	}
 }
 
+/*-------------------------------------------------
+   MKCHAMP - BELOW IS THE NEW SUB CALLED FROM UI.C. ONLY DIFFERENCE BETWEEN THIS SUB AND
+   frame_update IS IT CALLS NEW SUB CALLED update_hi INSTEAD OF update (located
+   in osd/windows/video.c)
+-------------------------------------------------*/
+
+void video_manager::frame_update_hi(bool debug)
+{
+	// only render sound and video if we're in the running phase
+	int phase = machine().phase();
+	bool skipped_it = m_skipping_this_frame;
+	if (phase == MACHINE_PHASE_RUNNING && (!machine().paused() || machine().options().update_in_pause()))
+	{
+		bool anything_changed = finish_screen_updates();
+
+		// if none of the screens changed and we haven't skipped too many frames in a row,
+		// mark this frame as skipped to prevent throttling; this helps for games that
+		// don't update their screen at the monitor refresh rate
+		if (!anything_changed && !m_auto_frameskip && m_frameskip_level == 0 && m_empty_skip_count++ < 3)
+			skipped_it = true;
+		else
+			m_empty_skip_count = 0;
+	}
+
+	// draw the user interface
+	machine().ui().update_and_render(&machine().render().ui_container());
+
+	// if we're throttling, synchronize before rendering
+	attotime current_time = machine().time();
+	if (!debug && !skipped_it && effective_throttle())
+		update_throttle(current_time);
+
+	// ask the OSD to update
+	g_profiler.start(PROFILER_BLIT);
+	machine().osd().update_hi(!debug && skipped_it);
+	g_profiler.stop();
+
+	machine().manager().lua()->periodic_check();
+
+	// perform tasks for this frame
+	if (!debug)
+		machine().call_notifiers(MACHINE_NOTIFY_FRAME);
+
+	// update frameskipping
+	if (!debug)
+		update_frameskip();
+
+	// update speed computations
+	if (!debug)
+		recompute_speed(current_time);
+
+	// call the end-of-frame callback
+	if (phase == MACHINE_PHASE_RUNNING)
+	{
+		// reset partial updates if we're paused or if the debugger is active
+		if (machine().first_screen() != NULL && (machine().paused() || debug || debugger_within_instruction_hook(machine())))
+			machine().first_screen()->reset_partial_updates();
+	}
+}
+
 
 //-------------------------------------------------
 //  end_recording - stop recording of a movie
