@@ -462,7 +462,10 @@ void rom_load_manager::verify_length_and_hash(const char *name, UINT32 explength
 void rom_load_manager::display_loading_rom_message(const char *name, bool from_list)
 {
 	char buffer[200];
-
+ 	//MKCHAMP - DISABLING WHOLE SUB ROUTINE TO ELIMINATE LOADING MESSAGES
+ 	//REMOVING ALWAYS
+  //if (!options_get_bool(mame_options(), OPTION_DISABLE_LOADING_PATCH))
+ 	return;
 	if (name != nullptr)
 		sprintf(buffer, "%s (%d%%)", from_list ? "Loading Software" : "Loading Machine", (UINT32)(100 * (UINT64)m_romsloadedsize / (UINT64)m_romstotalsize));
 	else

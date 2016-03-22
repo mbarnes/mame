@@ -80,6 +80,9 @@ public:
 
 	// render a frame
 	void frame_update(bool debug = false);
+	
+	// MKCHAMP - DECLARING THE NEW video_frame_update_hi SUB
+  void frame_update_hi(bool debug = false);
 
 	// current speed helpers
 	std::string speed_text();

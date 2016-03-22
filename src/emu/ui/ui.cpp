@@ -388,11 +388,17 @@ void ui_manager::display_startup_screens(bool first_time, bool show_disclaimer)
 		switch (state)
 		{
 			case 0:
+				//MKCHAMP - BREAKING OUT SO DISCLAIMERS AREN'T SHOWN
+ 				if (!machine().options().disable_nagscreen_patch())
+  					break;
 				if (show_disclaimer && disclaimer_string(messagebox_text).length() > 0)
 					set_handler(handler_messagebox_ok, 0);
 				break;
 
 			case 1:
+				//MKCHAMP - BREAKING OUT SO WARNINGS AREN'T SHOWN
+ 				if (!machine().options().disable_nagscreen_patch())
+ 					break;
 				if (show_warnings && warnings_string(messagebox_text).length() > 0)
 				{
 					set_handler(handler_messagebox_ok, 0);
@@ -404,6 +410,9 @@ void ui_manager::display_startup_screens(bool first_time, bool show_disclaimer)
 				break;
 
 			case 2:
+				//MKCHAMP - BREAKING OUT SO GAME INFO ISN'T SHOWN
+ 				if (!machine().options().disable_nagscreen_patch())
+    					break;
 				if (show_gameinfo && game_info_astring(messagebox_text).length() > 0)
 					set_handler(handler_messagebox_anykey, 0);
 				break;
@@ -425,12 +434,18 @@ void ui_manager::display_startup_screens(bool first_time, bool show_disclaimer)
 		// loop while we have a handler
 		while (m_handler_callback != handler_ingame && !machine().scheduled_event_pending() && !ui_menu::stack_has_special_main_menu())
 		{
-			machine().video().frame_update();
+			//MKChamp Disabling of whitebox
+ 			if (machine().options().disable_nagscreen_patch())
+ 			{
+ 				machine().video().frame_update();
+ 			}
 		}
 
 		// clear the handler and force an update
 		set_handler(handler_ingame, 0);
-		machine().video().frame_update();
+		//MKChamp Disabling of whitebox
+ 		if (machine().options().disable_nagscreen_patch())
+ 			machine().video().frame_update();
 	}
 
 	// if we're the empty driver, force the menus on
@@ -450,14 +465,22 @@ void ui_manager::set_startup_text(const char *text, bool force)
 	osd_ticks_t curtime = osd_ticks();
 
 	// copy in the new text
-	messagebox_text.assign(text);
-	messagebox_backcolor = UI_BACKGROUND_COLOR;
+	//MKCHAMP -- DISABLE IS NOT DISABLED :-)
+ 	if (machine().options().disable_nagscreen_patch())
+ 	{
+		messagebox_text.assign(text);
+		messagebox_backcolor = UI_BACKGROUND_COLOR;
+	}
 
 	// don't update more than 4 times/second
 	if (force || (curtime - lastupdatetime) > osd_ticks_per_second() / 4)
 	{
 		lastupdatetime = curtime;
-		machine().video().frame_update();
+		//MKCHAMP - CALLING NEW SUB CALLED video_frame_update_hi SO WHITE BOX DOES NOT SHOW BUT REFRESHSPEED IS STILL CALCULATED
+ 		if (!machine().options().disable_loading_patch())
+ 			machine().video().frame_update_hi();
+ 		else
+ 			machine().video().frame_update();
 	}
 }
 

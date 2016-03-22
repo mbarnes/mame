@@ -164,6 +164,33 @@ void mini_osd_interface::update(bool skip_redraw)
 		machine().schedule_exit();
 }
 
+//-------------------------------------------------
+//  MKChamp update_hi - periodic system update
+//-------------------------------------------------
+
+void mini_osd_interface::update_hi(bool skip_redraw)
+{
+	// get the minimum width/height for the current layout
+	int minwidth, minheight;
+	our_target->compute_minimum_size(minwidth, minheight);
+
+	// make that the size of our target
+	our_target->set_bounds(minwidth, minheight);
+
+	// get the list of primitives for the target at the current size
+	render_primitive_list &primlist = our_target->get_primitives();
+
+	// lock them, and then render them
+	primlist.acquire_lock();
+
+	// do the drawing here
+	primlist.release_lock();
+
+	// after 5 seconds, exit
+	if (machine().time() > attotime::from_seconds(5))
+		machine().schedule_exit();
+}
+
 
 //============================================================
 //  keyboard_get_state

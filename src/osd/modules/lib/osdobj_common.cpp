@@ -360,6 +360,22 @@ void osd_common_t::update(bool skip_redraw)
 
 
 //-------------------------------------------------
+//  MKCHAMP
+//-------------------------------------------------
+
+void osd_common_t::update_hi(bool skip_redraw)
+{
+	//
+	// This method is called periodically to flush video updates to the
+	// screen, and also to allow the OSD a chance to update other systems
+	// on a regular basis. In general this will be called at the frame
+	// rate of the system being run; however, it may be called at more
+	// irregular intervals in some circumstances (e.g., multi-screen games
+	// or games with asynchronous updates).
+	//
+}
+
+//-------------------------------------------------
 //  init_debugger - perform debugger-specific
 //  initialization
 //-------------------------------------------------
