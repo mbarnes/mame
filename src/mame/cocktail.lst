@@ -43,6 +43,7 @@ qbert             // Q*bert (US set 1) [1982]
 superpac          // Super Pac-Man [1982]
 timeplt           // Time Pilot [1982]
 tp84              // Time Pilot '84 (set 1) [1984]
+xevious           // Xevious (Namco)
 zaxxon            // Zaxxon (set 1) [1982]
 
 // Pick up atari_vg machine, needed by galaga.cpp
