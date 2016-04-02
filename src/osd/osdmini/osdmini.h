@@ -33,6 +33,8 @@ public:
 	// general overridables
 	virtual void init(running_machine &machine);
 	virtual void update(bool skip_redraw);
+	//MKCHAMP Declaring update_hi
+	virtual void update_hi(bool skip_redraw);
 };
 
 

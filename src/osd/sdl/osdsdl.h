@@ -137,6 +137,9 @@ public:
 	// construction/destruction
 	sdl_osd_interface(sdl_options &options);
 	virtual ~sdl_osd_interface();
+	
+	//OZFALCON - Declaring hi subroutine
+ 	virtual void update_hi(bool skip_redraw) override;
 
 	// general overridables
 	virtual void init(running_machine &machine) override;
