@@ -914,6 +914,77 @@ void win_window_info::update()
 	mtlog_add("winwindow_video_window_update: end");
 }
 
+//============================================================
+//  MKCHAMP - LAST OF THE NEW SUB CHAIN.
+
+void win_window_info::update_hi()
+{
+	int targetview, targetorient;
+	render_layer_config targetlayerconfig;
+
+	assert(GetCurrentThreadId() == main_threadid);
+
+	mtlog_add("winwindow_video_window_update: begin");
+
+	// see if the target has changed significantly in window mode
+	targetview = m_target->view();
+	targetorient = m_target->orientation();
+	targetlayerconfig = m_target->layer_config();
+	if (targetview != m_targetview || targetorient != m_targetorient || targetlayerconfig != m_targetlayerconfig)
+	{
+		m_targetview = targetview;
+		m_targetorient = targetorient;
+		m_targetlayerconfig = targetlayerconfig;
+
+		// in window mode, reminimize/maximize
+		if (!m_fullscreen)
+		{
+			if (m_isminimized)
+				SendMessage(m_hwnd, WM_USER_SET_MINSIZE, 0, 0);
+			if (m_ismaximized)
+				SendMessage(m_hwnd, WM_USER_SET_MAXSIZE, 0, 0);
+		}
+	}
+
+	// if we're visible and running and not in the middle of a resize, draw
+	if (m_hwnd != nullptr && m_target != nullptr && m_renderer != nullptr)
+	{
+		bool got_lock = true;
+
+		mtlog_add("winwindow_video_window_update: try lock");
+
+		// only block if we're throttled
+		if (machine().video().throttled() || timeGetTime() - last_update_time > 250)
+			m_render_lock.lock();
+		else
+			got_lock = m_render_lock.try_lock();
+
+		// only render if we were able to get the lock
+		if (got_lock)
+		{
+			//render_primitive_list *primlist;
+
+			mtlog_add("winwindow_video_window_update: got lock");
+
+			// don't hold the lock; we just used it to see if rendering was still happening
+			m_render_lock.unlock();
+
+			// ensure the target bounds are up-to-date, and then get the primitives
+			m_renderer->get_primitives();
+
+			// post a redraw request with the primitive list as a parameter
+			last_update_time = timeGetTime();
+			mtlog_add("winwindow_video_window_update: PostMessage start");
+		//	if (multithreading_enabled)
+		//		PostMessage(m_hwnd, WM_USER_REDRAW, 0, (LPARAM)primlist);
+		//	else
+		//		SendMessage(m_hwnd, WM_USER_REDRAW, 0, (LPARAM)primlist);
+			mtlog_add("winwindow_video_window_update: PostMessage end");
+		}
+	}
+
+	mtlog_add("winwindow_video_window_update: end");
+}
 
 
 //============================================================

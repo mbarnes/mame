@@ -62,6 +62,8 @@ public:
 	int window_init();
 
 	void update();
+	//MKCHAMP DECLARING UPDATE_HI
+	void update_hi();
 	void toggle_full_screen();
 	void modify_prescale(int dir);
 	void resize(INT32 width, INT32 height);

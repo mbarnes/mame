@@ -298,6 +298,9 @@ private:
 	windows_options &   m_options;
 	slider_state *      m_sliders;
 
+ 	//MKChamp - Declaring hi subroutine
+ 	virtual void update_hi(bool skip_redraw) override;
+ 	
 	static const int DEFAULT_FONT_HEIGHT = 200;
 };
 

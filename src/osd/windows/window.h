@@ -52,6 +52,9 @@ public:
 	int fullscreen() const override { return m_fullscreen; }
 
 	void update();
+	
+	//MKCHAMP
+	void update_hi();
 
 	virtual osd_monitor_info *winwindow_video_window_monitor(const osd_rect *proposed) override;
 
