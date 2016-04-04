@@ -163,7 +163,7 @@ SOUNDS["POKEY"] = true
 --SOUNDS["TIA"] = true
 SOUNDS["NES_APU"] = true
 --SOUNDS["AMIGA"] = true
---SOUNDS["ASTROCADE"] = true
+SOUNDS["ASTROCADE"] = true
 SOUNDS["NAMCO"] = true
 --SOUNDS["NAMCO_15XX"] = true
 --SOUNDS["NAMCO_CUS30"] = true
@@ -372,7 +372,7 @@ MACHINES["I8257"] = true
 --MACHINES["AT45DBXX"] = true
 --MACHINES["ATAFLASH"] = true
 --MACHINES["AY31015"] = true
---MACHINES["BANKDEV"] = true
+MACHINES["BANKDEV"] = true
 --MACHINES["CDP1852"] = true
 --MACHINES["CDP1871"] = true
 --MACHINES["CMOS40105"] = true
@@ -546,7 +546,7 @@ MACHINES["TMS6100"] = true
 --MACHINES["X2212"] = true
 --MACHINES["X76F041"] = true
 --MACHINES["X76F100"] = true
---MACHINES["Z80CTC"] = true
+MACHINES["Z80CTC"] = true
 --MACHINES["Z80DART"] = true
 MACHINES["Z80DMA"] = true
 --MACHINES["Z80PIO"] = true
@@ -668,6 +668,7 @@ function linkProjects_mame_cocktail(_target, _subtarget)
 		"dataeast",
 		"gottlieb",
 		"konami",
+		"midway",
 		"namco",
 		"nichibut",
 		"nintendo",
@@ -1589,6 +1590,79 @@ files {
 	MAME_DIR .. "src/mame/video/k001604.h",
 	MAME_DIR .. "src/mame/video/k057714.cpp",
 	MAME_DIR .. "src/mame/video/k057714.h",
+}
+
+createMAMEProjects(_target, _subtarget, "midway")
+files {
+	MAME_DIR .. "src/mame/drivers/astrocde.cpp",
+	MAME_DIR .. "src/mame/includes/astrocde.h",
+	MAME_DIR .. "src/mame/video/astrocde.cpp",
+	MAME_DIR .. "src/mame/audio/gorf.cpp",
+	MAME_DIR .. "src/mame/audio/wow.cpp",
+	MAME_DIR .. "src/mame/drivers/atlantis.cpp",
+	MAME_DIR .. "src/mame/drivers/balsente.cpp",
+	MAME_DIR .. "src/mame/includes/balsente.h",
+	MAME_DIR .. "src/mame/machine/balsente.cpp",
+	MAME_DIR .. "src/mame/video/balsente.cpp",
+	MAME_DIR .. "src/mame/drivers/gridlee.cpp",
+	MAME_DIR .. "src/mame/includes/gridlee.h",
+	MAME_DIR .. "src/mame/audio/gridlee.cpp",
+	MAME_DIR .. "src/mame/video/gridlee.cpp",
+	MAME_DIR .. "src/mame/drivers/mcr.cpp",
+	MAME_DIR .. "src/mame/includes/mcr.h",
+	MAME_DIR .. "src/mame/machine/mcr.cpp",
+	MAME_DIR .. "src/mame/video/mcr.cpp",
+	MAME_DIR .. "src/mame/drivers/mcr3.cpp",
+	MAME_DIR .. "src/mame/includes/mcr3.h",
+	MAME_DIR .. "src/mame/video/mcr3.cpp",
+	MAME_DIR .. "src/mame/drivers/spyhuntertec.cpp",
+	MAME_DIR .. "src/mame/drivers/mcr68.cpp",
+	MAME_DIR .. "src/mame/includes/mcr68.h",
+	MAME_DIR .. "src/mame/machine/mcr68.cpp",
+	MAME_DIR .. "src/mame/video/mcr68.cpp",
+	MAME_DIR .. "src/mame/drivers/midqslvr.cpp",
+	MAME_DIR .. "src/mame/drivers/midtunit.cpp",
+	MAME_DIR .. "src/mame/includes/midtunit.h",
+	MAME_DIR .. "src/mame/machine/midtunit.cpp",
+	MAME_DIR .. "src/mame/video/midtunit.cpp",
+	MAME_DIR .. "src/mame/drivers/midvunit.cpp",
+	MAME_DIR .. "src/mame/includes/midvunit.h",
+	MAME_DIR .. "src/mame/video/midvunit.cpp",
+	MAME_DIR .. "src/mame/drivers/midwunit.cpp",
+	MAME_DIR .. "src/mame/includes/midwunit.h",
+	MAME_DIR .. "src/mame/machine/midwunit.cpp",
+	MAME_DIR .. "src/mame/drivers/midxunit.cpp",
+	MAME_DIR .. "src/mame/includes/midxunit.h",
+	MAME_DIR .. "src/mame/machine/midxunit.cpp",
+	MAME_DIR .. "src/mame/drivers/midyunit.cpp",
+	MAME_DIR .. "src/mame/includes/midyunit.h",
+	MAME_DIR .. "src/mame/machine/midyunit.cpp",
+	MAME_DIR .. "src/mame/video/midyunit.cpp",
+	MAME_DIR .. "src/mame/drivers/midzeus.cpp",
+	MAME_DIR .. "src/mame/includes/midzeus.h",
+	MAME_DIR .. "src/mame/video/midzeus.cpp",
+	MAME_DIR .. "src/mame/video/midzeus2.cpp",
+	MAME_DIR .. "src/mame/drivers/mw18w.cpp",
+	MAME_DIR .. "src/mame/drivers/mwsub.cpp",
+	MAME_DIR .. "src/mame/drivers/omegrace.cpp",
+	MAME_DIR .. "src/mame/drivers/pinball2k.cpp",
+	MAME_DIR .. "src/mame/drivers/seattle.cpp",
+	MAME_DIR .. "src/mame/drivers/sspeedr.cpp",
+	MAME_DIR .. "src/mame/includes/sspeedr.h",
+	MAME_DIR .. "src/mame/video/sspeedr.cpp",
+	MAME_DIR .. "src/mame/drivers/tmaster.cpp",
+	MAME_DIR .. "src/mame/drivers/vegas.cpp",
+	MAME_DIR .. "src/mame/drivers/wmg.cpp",
+	MAME_DIR .. "src/mame/drivers/williams.cpp",
+	MAME_DIR .. "src/mame/includes/williams.h",
+	MAME_DIR .. "src/mame/machine/williams.cpp",
+	MAME_DIR .. "src/mame/audio/williams.cpp",
+	MAME_DIR .. "src/mame/audio/williams.h",
+	MAME_DIR .. "src/mame/video/williams.cpp",
+	MAME_DIR .. "src/mame/machine/midwayic.cpp",
+	MAME_DIR .. "src/mame/machine/midwayic.h",
+	MAME_DIR .. "src/mame/audio/midway.cpp",
+	MAME_DIR .. "src/mame/audio/midway.h",
 }
 
 createMAMEProjects(_target, _subtarget, "namco")
