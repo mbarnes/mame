@@ -157,7 +157,7 @@ SOUNDS["YM2203"] = true
 --SOUNDS["YMF271"] = true
 --SOUNDS["YMF278B"] = true
 --SOUNDS["YMZ280B"] = true
---SOUNDS["SN76477"] = true
+SOUNDS["SN76477"] = true
 SOUNDS["SN76496"] = true
 SOUNDS["POKEY"] = true
 --SOUNDS["TIA"] = true
@@ -436,7 +436,7 @@ MACHINES["LDPR8210"] = true
 --MACHINES["M68340"] = true
 --MACHINES["M6M80011AP"] = true
 --MACHINES["MATSUCD"] = true
---MACHINES["MB14241"] = true
+MACHINES["MB14241"] = true
 --MACHINES["MB3773"] = true
 --MACHINES["MB8421"] = true
 --MACHINES["MB87078"] = true
@@ -668,6 +668,7 @@ function linkProjects_mame_cocktail(_target, _subtarget)
 		"dataeast",
 		"gottlieb",
 		"konami",
+		"midw8080",
 		"midway",
 		"namco",
 		"nichibut",
@@ -1591,6 +1592,23 @@ files {
 	MAME_DIR .. "src/mame/video/k001604.h",
 	MAME_DIR .. "src/mame/video/k057714.cpp",
 	MAME_DIR .. "src/mame/video/k057714.h",
+}
+
+createMAMEProjects(_target, _subtarget, "midw8080")
+files {
+	MAME_DIR .. "src/mame/drivers/8080bw.cpp",
+	MAME_DIR .. "src/mame/includes/8080bw.h",
+	MAME_DIR .. "src/mame/audio/8080bw.cpp",
+	MAME_DIR .. "src/mame/video/8080bw.cpp",
+	MAME_DIR .. "src/mame/drivers/m79amb.cpp",
+	MAME_DIR .. "src/mame/includes/m79amb.h",
+	MAME_DIR .. "src/mame/audio/m79amb.cpp",
+	MAME_DIR .. "src/mame/drivers/mw8080bw.cpp",
+	MAME_DIR .. "src/mame/includes/mw8080bw.h",
+	MAME_DIR .. "src/mame/machine/mw8080bw.cpp",
+	MAME_DIR .. "src/mame/audio/mw8080bw.cpp",
+	MAME_DIR .. "src/mame/video/mw8080bw.cpp",
+	MAME_DIR .. "src/mame/drivers/rotaryf.cpp",
 }
 
 createMAMEProjects(_target, _subtarget, "midway")
