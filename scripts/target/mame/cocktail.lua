@@ -173,7 +173,7 @@ SOUNDS["NAMCO"] = true
 --SOUNDS["SNKWAVE"] = true
 --SOUNDS["C140"] = true
 --SOUNDS["C352"] = true
---SOUNDS["TMS36XX"] = true
+SOUNDS["TMS36XX"] = true
 --SOUNDS["TMS3615"] = true
 SOUNDS["TMS5110"] = true
 --SOUNDS["TMS5220"] = true
@@ -673,6 +673,7 @@ function linkProjects_mame_cocktail(_target, _subtarget)
 		"nichibut",
 		"nintendo",
 		"pacman",
+		"phoenix",
 		"sega",
 		"univers",
 		"shared",
@@ -1934,6 +1935,20 @@ files {
 	MAME_DIR .. "src/mame/machine/pacplus.cpp",
 	MAME_DIR .. "src/mame/machine/theglobp.cpp",
 	MAME_DIR .. "src/mame/drivers/pengo.cpp",
+}
+
+createMAMEProjects(_target, _subtarget, "phoenix")
+files {
+	MAME_DIR .. "src/mame/drivers/naughtyb.cpp",
+	MAME_DIR .. "src/mame/includes/naughtyb.h",
+	MAME_DIR .. "src/mame/video/naughtyb.cpp",
+	MAME_DIR .. "src/mame/drivers/phoenix.cpp",
+	MAME_DIR .. "src/mame/includes/phoenix.h",
+	MAME_DIR .. "src/mame/audio/phoenix.cpp",
+	MAME_DIR .. "src/mame/video/phoenix.cpp",
+	MAME_DIR .. "src/mame/drivers/safarir.cpp",
+	MAME_DIR .. "src/mame/audio/pleiads.cpp",
+	MAME_DIR .. "src/mame/audio/pleiads.h",
 }
 
 createMAMEProjects(_target, _subtarget, "sega")
