@@ -15,6 +15,7 @@
 amidar            // Amidar [1982]
 btime             // Burger Time (Data East set 1) [1982]
 carnivalc         // Carnival (cocktail) [1980]
+centiped          // Centipede (revision 3) [1980]
 circusc           // Circus Charlie (level select, set 1) [1984]
 commando          // Commando (World) [1985]
 congo             // Congo Bongo (Rev C, 2 board stack) [1983]
@@ -54,6 +55,3 @@ timeplt           // Time Pilot [1982]
 tp84              // Time Pilot '84 (set 1) [1984]
 xevious           // Xevious (Namco)
 zaxxon            // Zaxxon (set 1) [1982]
-
-// Pick up atari_vg machine, needed by galaga.cpp
-centiped          // Centipede (revision 3) [1980]
