@@ -677,6 +677,7 @@ function linkProjects_mame_cocktail(_target, _subtarget)
 		"phoenix",
 		"sega",
 		"univers",
+		"valadon",
 		"shared",
 	}
 end
@@ -2194,6 +2195,17 @@ files {
 	MAME_DIR .. "src/mame/drivers/redclash.cpp",
 	MAME_DIR .. "src/mame/video/redclash.cpp",
 	MAME_DIR .. "src/mame/drivers/superdq.cpp",
+}
+
+createMAMEProjects(_target, _subtarget, "valadon")
+files {
+	MAME_DIR .. "src/mame/drivers/bagman.cpp",
+	MAME_DIR .. "src/mame/includes/bagman.h",
+	MAME_DIR .. "src/mame/machine/bagman.cpp",
+	MAME_DIR .. "src/mame/video/bagman.cpp",
+	MAME_DIR .. "src/mame/drivers/tankbust.cpp",
+	MAME_DIR .. "src/mame/includes/tankbust.h",
+	MAME_DIR .. "src/mame/video/tankbust.cpp",
 }
 
 end
