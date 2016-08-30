@@ -307,6 +307,10 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 		switch (state)
 		{
 			case 0:
+				// DISABLE INTERACTIVE WARNING MESSAGES
+				if (machine().options().skip_gameinfo())
+					break;
+
 				if (show_warnings)
 					messagebox_text = machine_info().warnings_string();
 				if (!messagebox_text.empty())
@@ -770,6 +774,10 @@ bool mame_ui_manager::is_menu_active(void)
 
 UINT32 mame_ui_manager::handler_messagebox(render_container &container)
 {
+	// DISABLE INITIALIZING, LOADING & DECRYPTING MESSAGES
+	if (machine().options().skip_gameinfo())
+		return 0;
+
 	draw_text_box(container, messagebox_text.c_str(), ui::text_layout::LEFT, 0.5f, 0.5f, messagebox_backcolor);
 	return 0;
 }
