@@ -300,6 +300,10 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 		switch (state)
 		{
 			case 0:
+				// DISABLE INTERACTIVE WARNING MESSAGES
+ 				if (machine().options().skip_gameinfo())
+ 					break;
+
 				if (show_warnings && warnings_string(messagebox_text).length() > 0)
 				{
 					set_handler(ui_callback_type::MODAL, std::bind(&mame_ui_manager::handler_messagebox_anykey, this, _1));
@@ -1010,6 +1014,10 @@ std::string &mame_ui_manager::game_info_astring(std::string &str)
 
 UINT32 mame_ui_manager::handler_messagebox(render_container &container)
 {
+	// DISABLE INITIALIZING, LOADING & DECRYPTING MESSAGES
+	if (machine().options().skip_gameinfo())
+		return 0;
+
 	draw_text_box(container, messagebox_text.c_str(), ui::text_layout::LEFT, 0.5f, 0.5f, messagebox_backcolor);
 	return 0;
 }
