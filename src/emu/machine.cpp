@@ -74,6 +74,8 @@
 #include "config.h"
 #include "debugger.h"
 #include "render.h"
+//MKCHAMP - ADDING HEADER FILE HISCORE FOR INCLUSION
+#include "hiscore.h"
 #include "uiinput.h"
 #include "crsshair.h"
 #include "unzip.h"
@@ -104,6 +106,8 @@ osd_interface &running_machine::osd() const
 //-------------------------------------------------
 //  running_machine - constructor
 //-------------------------------------------------
+
+int cpunum;
 
 running_machine::running_machine(const machine_config &_config, machine_manager &manager)
 	: firstcpu(nullptr),
@@ -146,6 +150,11 @@ running_machine::running_machine(const machine_config &_config, machine_manager 
 			break;
 		}
 	primary_screen = screen_device_iterator(root_device()).first();
+	
+	//MKCHAMP--initialize the cpu for hiscore
+ 	cpu[0] = firstcpu;
+ 	for (cpunum = 1; cpunum < ARRAY_LENGTH(cpu) && cpu[cpunum - 1] != NULL; cpunum++)
+ 		cpu[cpunum] = cpu[cpunum - 1]->next();
 
 	// fetch core options
 	if (options().debug())
@@ -302,6 +311,10 @@ int running_machine::run(bool quiet)
 
 		// load the configuration settings and NVRAM
 		m_configuration->load_settings();
+		
+		//MKCHAMP - INITIALIZING THE HISCORE ENGINE
+    if (! options().disable_hiscore_patch())
+   		hiscore_init(*this);
 
 		// disallow save state registrations starting here.
 		// Don't do it earlier, config load can create network
