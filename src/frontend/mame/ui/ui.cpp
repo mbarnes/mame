@@ -377,6 +377,10 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 		switch (state)
 		{
 			case 0:
+				// DISABLE INTERACTIVE WARNING MESSAGES
+ 				if (machine().options().skip_gameinfo())
+ 					break;
+
 				if (show_warnings && warnings_string(messagebox_text).length() > 0)
 				{
 					set_handler(handler_messagebox_anykey, 0);
@@ -430,6 +434,10 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 
 void mame_ui_manager::set_startup_text(const char *text, bool force)
 {
+	// DISABLE INITIALIZING, LOADING & DECRYPTING MESSAGES
+	if (machine().options().skip_gameinfo())
+		return;
+
 	static osd_ticks_t lastupdatetime = 0;
 	osd_ticks_t curtime = osd_ticks();
 
