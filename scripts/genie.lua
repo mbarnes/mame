@@ -916,6 +916,8 @@ end
 		"-Wwrite-strings",
 		"-Wno-sign-compare",
 		"-Wno-conversion",
+		"-Wno-misleading-indentation",
+		"-Wno-terminate",
 	}
 -- warnings only applicable to C compiles
 	buildoptions_c {
