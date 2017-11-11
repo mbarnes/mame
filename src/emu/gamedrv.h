@@ -60,6 +60,12 @@ constexpr u32 MACHINE_FATAL_FLAGS               = MACHINE_NOT_WORKING | MACHINE_
 constexpr u32 MACHINE_WARNING_FLAGS             = MACHINE_WRONG_COLORS | MACHINE_IMPERFECT_COLORS | MACHINE_REQUIRES_ARTWORK | MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND | MACHINE_IMPERFECT_KEYBOARD | MACHINE_NO_SOUND | MACHINE_NO_COCKTAIL | MACHINE_NODEVICE_MICROPHONE | MACHINE_NODEVICE_CAMERA | MACHINE_NODEVICE_PRINTER | MACHINE_NODEVICE_LAN | MACHINE_NODEVICE_WAN;  // yellow disclaimer
 constexpr u32 MACHINE_BTANB_FLAGS               = MACHINE_IS_INCOMPLETE | MACHINE_NO_SOUND_HW; // default disclaimer
 
+// machine type string
+#define MACHINE_TYPE_STRING_ARCADE             "arcade"
+#define MACHINE_TYPE_STRING_CONSOLE            "console"
+#define MACHINE_TYPE_STRING_COMPUTER           "computer"
+#define MACHINE_TYPE_STRING_OTHER              "othersys"
+
 //**************************************************************************
 //  TYPE DEFINITIONS
 //**************************************************************************
