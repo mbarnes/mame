@@ -105,6 +105,7 @@ static const char s_dtd_string[] =
 "\t\t<!ATTLIST __XML_TOP__ cloneof CDATA #IMPLIED>\n"
 "\t\t<!ATTLIST __XML_TOP__ romof CDATA #IMPLIED>\n"
 "\t\t<!ATTLIST __XML_TOP__ sampleof CDATA #IMPLIED>\n"
+"\t\t<!ATTLIST __XML_TOP__ type CDATA #IMPLIED>\n"
 "\t\t<!ELEMENT description (#PCDATA)>\n"
 "\t\t<!ELEMENT year (#PCDATA)>\n"
 "\t\t<!ELEMENT manufacturer (#PCDATA)>\n"
@@ -578,6 +579,25 @@ void output_one(std::ostream &out, driver_enumerator &drivlist, const game_drive
 		out << " isbios=\"yes\"";
 	if (driver.flags & machine_flags::MECHANICAL)
 		out << " ismechanical=\"yes\"";
+
+	// append machine type
+	switch (driver.flags & machine_flags::MASK_TYPE)
+	{
+	case MACHINE_TYPE_ARCADE:
+		out << util::string_format(" type=\"%s\"", MACHINE_TYPE_STRING_ARCADE);
+		break;
+	case MACHINE_TYPE_CONSOLE:
+		out << util::string_format(" type=\"%s\"", MACHINE_TYPE_STRING_CONSOLE);
+		break;
+	case MACHINE_TYPE_COMPUTER:
+		out << util::string_format(" type=\"%s\"", MACHINE_TYPE_STRING_COMPUTER);
+		break;
+	case MACHINE_TYPE_OTHER:
+		out << util::string_format(" type=\"%s\"", MACHINE_TYPE_STRING_OTHER);
+		break;
+	default:
+		break;
+	}
 
 	// display clone information
 	int clone_of = drivlist.find(driver.parent);
