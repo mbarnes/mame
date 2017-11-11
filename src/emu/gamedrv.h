@@ -110,6 +110,12 @@ constexpr u64 MACHINE_IS_SKELETON_MECHANICAL    = MACHINE_IS_SKELETON | MACHINE_
 /// \}
 
 
+// machine type string
+#define MACHINE_TYPE_STRING_ARCADE             "arcade"
+#define MACHINE_TYPE_STRING_CONSOLE            "console"
+#define MACHINE_TYPE_STRING_COMPUTER           "computer"
+#define MACHINE_TYPE_STRING_OTHER              "othersys"
+
 //**************************************************************************
 //  TYPE DEFINITIONS
 //**************************************************************************
