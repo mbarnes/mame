@@ -44,6 +44,7 @@ const char info_xml_creator::s_dtd_string[] =
 "\t\t<!ATTLIST __XML_TOP__ cloneof CDATA #IMPLIED>\n"
 "\t\t<!ATTLIST __XML_TOP__ romof CDATA #IMPLIED>\n"
 "\t\t<!ATTLIST __XML_TOP__ sampleof CDATA #IMPLIED>\n"
+"\t\t<!ATTLIST __XML_TOP__ type CDATA #IMPLIED>\n"
 "\t\t<!ELEMENT description (#PCDATA)>\n"
 "\t\t<!ELEMENT year (#PCDATA)>\n"
 "\t\t<!ELEMENT manufacturer (#PCDATA)>\n"
@@ -300,6 +301,16 @@ void info_xml_creator::output_one()
 		fprintf(m_output, " runnable=\"no\"");
 	if (driver.flags & MACHINE_MECHANICAL)
 		fprintf(m_output, " ismechanical=\"yes\"");
+
+	// append machine type
+	if (driver.flags & MACHINE_TYPE_ARCADE)
+		fprintf(m_output, " type=\"%s\"", MACHINE_TYPE_STRING_ARCADE);
+	else if (driver.flags & MACHINE_TYPE_CONSOLE)
+		fprintf(m_output, " type=\"%s\"", MACHINE_TYPE_STRING_CONSOLE);
+	else if (driver.flags & MACHINE_TYPE_COMPUTER)
+		fprintf(m_output, " type=\"%s\"", MACHINE_TYPE_STRING_COMPUTER);
+	else if (driver.flags & MACHINE_TYPE_OTHER)
+		fprintf(m_output, " type=\"%s\"", MACHINE_TYPE_STRING_OTHER);
 
 	// display clone information
 	int clone_of = m_drivlist.find(driver.parent);

@@ -50,7 +50,11 @@ const UINT32 MACHINE_IS_INCOMPLETE             = 0x01000000;   // any official g
 const UINT32 MACHINE_IS_SKELETON               = MACHINE_NO_SOUND | MACHINE_NOT_WORKING; // mask for skelly games
 const UINT32 MACHINE_IS_SKELETON_MECHANICAL    = MACHINE_IS_SKELETON | MACHINE_MECHANICAL | MACHINE_REQUIRES_ARTWORK; // mask for skelly mechanical games
 
-
+// machine type string
+#define MACHINE_TYPE_STRING_ARCADE             "arcade"
+#define MACHINE_TYPE_STRING_CONSOLE            "console"
+#define MACHINE_TYPE_STRING_COMPUTER           "computer"
+#define MACHINE_TYPE_STRING_OTHER              "othersys"
 
 //**************************************************************************
 //  TYPE DEFINITIONS
