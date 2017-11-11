@@ -453,13 +453,13 @@ void emu_options::parse_standard_inis(std::string &error_string)
 		parse_one_ini("horizont", OPTION_PRIORITY_ORIENTATION_INI, &error_string);
 
 	if (cursystem->flags & MACHINE_TYPE_ARCADE)
-		parse_one_ini("arcade", OPTION_PRIORITY_SYSTYPE_INI, &error_string);
+		parse_one_ini(MACHINE_TYPE_STRING_ARCADE, OPTION_PRIORITY_SYSTYPE_INI, &error_string);
 	else if (cursystem->flags & MACHINE_TYPE_CONSOLE)
-		parse_one_ini("console", OPTION_PRIORITY_SYSTYPE_INI, &error_string);
+		parse_one_ini(MACHINE_TYPE_STRING_CONSOLE, OPTION_PRIORITY_SYSTYPE_INI, &error_string);
 	else if (cursystem->flags & MACHINE_TYPE_COMPUTER)
-		parse_one_ini("computer", OPTION_PRIORITY_SYSTYPE_INI, &error_string);
+		parse_one_ini(MACHINE_TYPE_STRING_COMPUTER, OPTION_PRIORITY_SYSTYPE_INI, &error_string);
 	else if (cursystem->flags & MACHINE_TYPE_OTHER)
-		parse_one_ini("othersys", OPTION_PRIORITY_SYSTYPE_INI, &error_string);
+		parse_one_ini(MACHINE_TYPE_STRING_OTHER, OPTION_PRIORITY_SYSTYPE_INI, &error_string);
 
 	machine_config config(*cursystem, *this);
 	screen_device_iterator iter(config.root_device());
