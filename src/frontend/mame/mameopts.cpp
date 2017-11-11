@@ -52,16 +52,16 @@ void mame_options::parse_standard_inis(emu_options &options, std::ostream &error
 	switch (cursystem->flags & machine_flags::MASK_TYPE)
 	{
 	case machine_flags::TYPE_ARCADE:
-		parse_one_ini(options, "arcade", OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
+		parse_one_ini(options, MACHINE_TYPE_STRING_ARCADE, OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
 		break;
 	case machine_flags::TYPE_CONSOLE:
-		parse_one_ini(options ,"console", OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
+		parse_one_ini(options, MACHINE_TYPE_STRING_CONSOLE, OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
 		break;
 	case machine_flags::TYPE_COMPUTER:
-		parse_one_ini(options, "computer", OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
+		parse_one_ini(options, MACHINE_TYPE_STRING_COMPUTER, OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
 		break;
 	case machine_flags::TYPE_OTHER:
-		parse_one_ini(options, "othersys", OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
+		parse_one_ini(options, MACHINE_TYPE_STRING_OTHER, OPTION_PRIORITY_SYSTYPE_INI, &error_stream);
 		break;
 	default:
 		break;
