@@ -11,7 +11,6 @@
 #	if BGFX_USE_EGL
 
 #		if BX_PLATFORM_RPI
-#			include <X11/Xlib.h>
 #			include <bcm_host.h>
 #		endif // BX_PLATFORM_RPI
 
