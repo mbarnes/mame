@@ -1591,7 +1591,7 @@ endif
 ifndef RASPBERRY_SYSROOT
 	$(error RASPBERRY_SYSROOT is not set)
 endif
-	$(SILENT) $(GENIE) $(PARAMS) --gcc=rpi --gcc_version=4.9.2 --osd=sdl --targetos=rpi --targetos=rpi --NO_USE_MIDI=1 --PLATFORM=arm --NOASM=1 --USE_QTDEBUG=0 --SDL_INSTALL_ROOT=$(RASPBERRY_SYSROOT)/usr  $(MAKETYPE)
+	$(SILENT) $(GENIE) $(PARAMS) --gcc=rpi --gcc_version=$(GCC_VERSION) --osd=sdl --targetos=rpi --targetos=rpi --NO_USE_MIDI=1 --PLATFORM=arm --NOASM=1 --USE_QTDEBUG=0 --SDL_INSTALL_ROOT=$(RASPBERRY_SYSROOT)/usr  $(MAKETYPE)
 
 .PHONY: rpi
 rpi: generate $(PROJECTDIR_SDL)/$(MAKETYPE)-rpi/Makefile
