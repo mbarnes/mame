@@ -615,6 +615,7 @@ function toolchain(_buildDir, _subDir)
 	configuration { "rpi" }
 		objdir ( _buildDir .. "rpi/obj")
 		libdirs {
+			"$(RASPBERRY_SYSROOT)/usr/lib/arm-linux-gnueabihf",
 			"$(RASPBERRY_SYSROOT)/opt/vc/lib",
 		}
 		includedirs {
