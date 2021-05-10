@@ -311,6 +311,7 @@ Core Misc Options
 | :ref:`bios <mame-commandline-bios>`
 | :ref:`[no]cheat <mame-commandline-cheat>`
 | :ref:`[no]skip_gameinfo <mame-commandline-skipgameinfo>`
+| :ref:`[no]skip_warnings <mame-commandline-skipwarnings>`
 | :ref:`uifont <mame-commandline-uifont>`
 | :ref:`ramsize <mame-commandline-ramsize>`
 | :ref:`confirm_quit <mame-commandline-confirmquit>`
