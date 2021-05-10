@@ -4013,6 +4013,19 @@ Core Misc Options
 
             mame samsho5 -skip_gameinfo
 
+.. _mame-commandline-skipwarnings:
+
+**-[no]skip_warnings**
+
+    Forces MAME to skip displaying the emulation warnings screen.
+
+    The default is OFF (**-noskip_warnings**).
+
+    Example:
+        .. code-block:: bash
+
+            mame gorf -skip_warnings
+
 .. _mame-commandline-uifont:
 
 **-uifont** *<fontname>*
