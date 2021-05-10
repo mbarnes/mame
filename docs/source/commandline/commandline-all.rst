@@ -760,6 +760,12 @@ Core misc options
 
 	Forces MAME to skip displaying the game info screen. The default is OFF (*-noskip_gameinfo*).
 
+**-[no]skip_warnings**
+
+    Forces MAME to skip displaying the emulation warnings screen.
+
+    The default is OFF (**-noskip_warnings**).
+
 **-uifont** *<fontname>*
 
 	Specifies the name of a font file to use for the UI font. If this font cannot be found or cannot be loaded, the system will fall back to its built-in UI font. On some platforms 'fontname' can be a system font name (TTF) instead of a (BDF) font file. The default is '*default*' (use the OSD-determined default font).
