@@ -162,6 +162,7 @@
 #define OPTION_BIOS                 "bios"
 #define OPTION_CHEAT                "cheat"
 #define OPTION_SKIP_GAMEINFO        "skip_gameinfo"
+#define OPTION_SKIP_WARNINGS        "skip_warnings"
 #define OPTION_SKIP_MANDATORY_FILEMAN   "skip_mandatory_fileman"
 #define OPTION_UI_FONT              "uifont"
 #define OPTION_UI                   "ui"
@@ -438,6 +439,7 @@ public:
 	const char *bios() const { return value(OPTION_BIOS); }
 	bool cheat() const { return bool_value(OPTION_CHEAT); }
 	bool skip_gameinfo() const { return bool_value(OPTION_SKIP_GAMEINFO); }
+	bool skip_warnings() const { return bool_value(OPTION_SKIP_WARNINGS); }
 	bool skip_mandatory_fileman() const { return bool_value(OPTION_SKIP_MANDATORY_FILEMAN); }
 	const char *ui_font() const { return value(OPTION_UI_FONT); }
 	ui_option ui() const { return m_ui; }
