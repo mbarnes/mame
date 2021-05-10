@@ -1418,6 +1418,14 @@ Core Misc Options
 
 	Forces MAME to skip displaying the system info screen. The default is OFF (*-noskip_gameinfo*).
 
+.. _mame-commandline-skipwarnings:
+
+**-[no]skip_warnings**
+
+    Forces MAME to skip displaying the emulation warnings screen.
+
+    The default is OFF (**-noskip_warnings**).
+
 .. _mame-commandline-uifont:
 
 **-uifont** *<fontname>*
