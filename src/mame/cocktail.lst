@@ -80,6 +80,9 @@ junofrst          // Juno First [1983]
 @source:ladybug.cpp
 ladybug           // Lady Bug [1981]
 
+@source:m52.cpp
+mpatrolw          // Moon Patrol (Williams) [1982]
+
 @source:mappy.cpp
 digdug2           // Dig Dug II (New Ver.) [1985]
 grobda            // Grobda (New Ver.) [1984]
