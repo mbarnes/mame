@@ -26,7 +26,7 @@ blueprnt          // Blue Print (Midway) [1982]
 bombjack          // Bomb Jack (set 1) [1984]
 
 @source:btime.cpp
-btime             // Burger Time (Data East set 1) [1982]
+btimem            // Burger Time (Midway) [1982]
 
 @source:centiped.cpp
 centiped          // Centipede (revision 4) [1980]
