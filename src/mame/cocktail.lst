@@ -26,6 +26,7 @@ blueprnt          // Blue Print (Midway) [1982]
 bombjack          // Bomb Jack (set 1) [1984]
 
 @source:btime.cpp
+bnjm              // Bump 'n' Jump (Midway) [1982]
 btimem            // Burger Time (Midway) [1982]
 
 @source:centiped.cpp
