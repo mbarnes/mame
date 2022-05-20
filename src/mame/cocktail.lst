@@ -133,6 +133,9 @@ quantum           // Quantum (rev 2) [1982]
 @source:shaolins.cpp
 kicker            // Kicker [1985]
 
+@source:system1.cpp
+upndown           // Up'n Down (315-5030) [1983]
+
 @source:timeplt.cpp
 timeplt           // Time Pilot [1982]
 
