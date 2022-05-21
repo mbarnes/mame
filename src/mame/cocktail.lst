@@ -130,6 +130,9 @@ zookeep           // Zoo Keeper (set 1) [1982]
 @source:quantum.cpp
 quantum           // Quantum (rev 2) [1982]
 
+@source:rocnrope.cpp
+rocnrope          // Roc'n Rope [1983]
+
 @source:shaolins.cpp
 kicker            // Kicker [1985]
 
