@@ -684,7 +684,7 @@ MACHINES["TMS6100"] = true
 --MACHINES["UPD1990A"] = true
 --MACHINES["UPD4991A"] = true
 --MACHINES["UPD4992"] = true
---MACHINES["UPD4701"] = true
+MACHINES["UPD4701"] = true
 --MACHINES["UPD7001"] = true
 --MACHINES["UPD7002"] = true
 --MACHINES["UPD7004"] = true
@@ -896,6 +896,7 @@ function linkProjects_mame_cocktail(_target, _subtarget)
 		"pacman",
 		"phoenix",
 		"sega",
+		"seta",
 		"taito",
 		"tehkan",
 		"univers",
@@ -2682,6 +2683,53 @@ files {
 	MAME_DIR .. "src/mame/machine/xbox_pci.cpp",
 	MAME_DIR .. "src/mame/drivers/flashbeats.cpp",
 	MAME_DIR .. "src/mame/drivers/segaatom.cpp",
+}
+
+createMAMEProjects(_target, _subtarget, "seta")
+files {
+	MAME_DIR .. "src/mame/drivers/aleck64.cpp",
+	MAME_DIR .. "src/mame/machine/n64.cpp",
+	MAME_DIR .. "src/mame/video/n64.cpp",
+	MAME_DIR .. "src/mame/video/n64types.h",
+	MAME_DIR .. "src/mame/video/rdpfiltr.hxx",
+	MAME_DIR .. "src/mame/video/n64.h",
+	MAME_DIR .. "src/mame/video/rdpblend.cpp",
+	MAME_DIR .. "src/mame/video/rdpblend.h",
+	MAME_DIR .. "src/mame/video/rdptpipe.cpp",
+	MAME_DIR .. "src/mame/video/rdptpipe.h",
+	MAME_DIR .. "src/mame/video/pin64.cpp",
+	MAME_DIR .. "src/mame/video/pin64.h",
+	MAME_DIR .. "src/mame/drivers/hanaawas.cpp",
+	MAME_DIR .. "src/mame/drivers/jclub2.cpp",
+	MAME_DIR .. "src/mame/drivers/macs.cpp",
+	MAME_DIR .. "src/mame/drivers/seta.cpp",
+	MAME_DIR .. "src/mame/includes/seta.h",
+	MAME_DIR .. "src/mame/video/seta.cpp",
+	MAME_DIR .. "src/mame/drivers/seta2.cpp",
+	MAME_DIR .. "src/mame/includes/seta2.h",
+	MAME_DIR .. "src/mame/video/seta2.cpp",
+	MAME_DIR .. "src/mame/drivers/speedatk.cpp",
+	MAME_DIR .. "src/mame/includes/speedatk.h",
+	MAME_DIR .. "src/mame/video/speedatk.cpp",
+	MAME_DIR .. "src/mame/drivers/speglsht.cpp",
+	MAME_DIR .. "src/mame/drivers/srmp2.cpp",
+	MAME_DIR .. "src/mame/includes/srmp2.h",
+	MAME_DIR .. "src/mame/video/srmp2.cpp",
+	MAME_DIR .. "src/mame/drivers/srmp5.cpp",
+	MAME_DIR .. "src/mame/drivers/srmp6.cpp",
+	MAME_DIR .. "src/mame/drivers/ssv.cpp",
+	MAME_DIR .. "src/mame/includes/ssv.h",
+	MAME_DIR .. "src/mame/video/ssv.cpp",
+	MAME_DIR .. "src/mame/video/st0020.cpp",
+	MAME_DIR .. "src/mame/video/st0020.h",
+	MAME_DIR .. "src/mame/machine/st0016.cpp",
+	MAME_DIR .. "src/mame/machine/st0016.h",
+	MAME_DIR .. "src/mame/drivers/simple_st0016.cpp",
+	MAME_DIR .. "src/mame/video/seta001.cpp",
+	MAME_DIR .. "src/mame/video/seta001.h",
+	MAME_DIR .. "src/mame/video/x1_012.cpp",
+	MAME_DIR .. "src/mame/video/x1_012.h",
+	MAME_DIR .. "src/mame/drivers/thedealr.cpp",
 }
 
 createMAMEProjects(_target, _subtarget, "taito")

@@ -142,8 +142,14 @@ kicker            // Kicker [1985]
 @source:system1.cpp
 upndown           // Up'n Down (315-5030) [1983]
 
+@source:tempest.cpp
+tempest           // Tempest (rev 3, Revised Hardware) [1980]
+
 @source:timeplt.cpp
 timeplt           // Time Pilot [1982]
+
+@source:tnzs.cpp
+arknoid2u         // Arkanoid - Revenge of DOH (US) [1987]
 
 @source:tp84.cpp
 tp84              // Time Pilot '84 (set 1) [1984]
