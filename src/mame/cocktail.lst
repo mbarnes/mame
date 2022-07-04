@@ -16,6 +16,9 @@
 @source:astrocde.cpp
 gorf              // Gorf [1981]
 
+@source:atarisy1.cpp
+marble            // Marble Madness (set 1) [1984]
+
 @source:bagman.cpp
 bagman            // Bagman [1982]
 
