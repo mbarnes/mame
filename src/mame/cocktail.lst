@@ -13,6 +13,9 @@
 @source:capcom/1942.cpp
 1942              // 1942 (Revision B) [1984]
 
+@source:capcom/1943.cpp
+1943u             // 1943: The Battle of Midway (US, Rev C) [1987]
+
 @source:midway/astrocde.cpp
 gorf              // Gorf [1981]
 
@@ -56,6 +59,7 @@ dkongjr           // Donkey Kong Junior (US set F-2) [1982]
 
 @source:universal/docastle.cpp
 docastle          // Mr. Do's Castle (set 1) [1983]
+jjack             // Jumping Jack [1984]
 
 @source:namco/galaga.cpp
 digdug            // Dig Dug (rev 2) [1982]
@@ -66,6 +70,7 @@ xevious           // Xevious (Namco)
 amidar            // Amidar [1982]
 frogger           // Frogger [1981]
 galaxian          // Galaxian (Namco set 1) [1979]
+scobras           // Super Cobra (Stern Electronics) [1981]
 
 @source:namco/gaplus.cpp
 gaplus            // Gaplus (GP2 rev. B) [1984]
@@ -120,12 +125,14 @@ maketrax          // Make Trax (US set 1)
 mspacman          // Ms. Pac-Man [1981]
 pacman            // Pac-Man (Midway) [1980]
 pacplus           // Pac-Man Plus [1982]
+vanvan            // Van-Van Car [1983]
 
 @source:pacman/pengo.cpp
 pengo             // Pengo (set 1 rev C, encrypted) [1982]
 
 @source:phoenix/phoenix.cpp
 phoenix           // Phoenix (Amstar, set 1) [1980]
+pleiadce          // Pleiads (Centuri) [1981]
 
 @source:konami/pooyan.cpp
 pooyan            // Pooyan [1982]
