@@ -21,6 +21,7 @@ CPUS["MB88XX"] = true
 CPUS["MCS48"] = true
 CPUS["MCS51"] = true
 CPUS["S2650"] = true
+CPUS["TMS32010"] = true
 CPUS["TMS57002"] = true
 CPUS["Z80"] = true
 
@@ -50,6 +51,7 @@ SOUNDS["TMS5220"] = true
 SOUNDS["VOTRAX_SC01"] = true
 SOUNDS["YM2151"] = true
 SOUNDS["YM2203"] = true
+SOUNDS["YM3812"] = true
 
 --------------------------------------------------
 -- specify required video cores
@@ -72,6 +74,7 @@ MACHINES["BANKDEV"] = true
 MACHINES["EEPROMDEV"] = true
 MACHINES["ER2055"] = true
 MACHINES["GEN_LATCH"] = true
+MACHINES["I8243"] = true
 MACHINES["I8255"] = true
 MACHINES["I8257"] = true
 MACHINES["INPUT_MERGER"] = true
@@ -131,8 +134,10 @@ PROJECTS = {
 	"phoenix",
 	"sega",
 	"seta",
+	"sunelectronics",
 	"taito",
 	"tecmo",
+	"toaplan",
 	"universal",
 	"valadon",
 	"shared"

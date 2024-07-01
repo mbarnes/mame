@@ -16,6 +16,9 @@
 @source:capcom/1943.cpp
 1943u             // 1943: The Battle of Midway (US, Rev C) [1987]
 
+@source:sunelectronics/arabian.cpp
+arabiana          // Arabian (Atari) [1983]
+
 @source:midway/astrocde.cpp
 gorf              // Gorf [1981]
 
@@ -56,6 +59,7 @@ contra            // Contra (US / Asia, set 1) [1987]
 dkong             // Donkey Kong (US set 1) [1981]
 dkong3            // Donkey Kong 3 (US) [1983]
 dkongjr           // Donkey Kong Junior (US set F-2) [1982]
+dkongx            // Donkey Kong II: Jumpman Returns (hack, V1.2) [2006]
 
 @source:universal/docastle.cpp
 docastle          // Mr. Do's Castle (set 1) [1983]
@@ -90,6 +94,9 @@ jrpacman          // Jr. Pac-Man (11/9/83) [1983]
 @source:konami/junofrst.cpp
 junofrst          // Juno First [1983]
 
+@source:sunelectronics/kangaroo.cpp
+kangarooa         // Kangaroo (Atari) [1982]
+
 @source:universal/ladybug.cpp
 ladybug           // Lady Bug [1981]
 
@@ -109,6 +116,7 @@ todruaga          // The Tower of Druaga (New Ver.) [1984]
 journey           // Journey [1983]
 kickc             // Kick (cocktail) [1981]
 shollow           // Satan's Hollow (set 1) [1981]
+solarfox          // Solar Fox (upright) [1981]
 
 @source:universal/mrdo.cpp
 mrdo              // Mr. Do! [1982]
@@ -126,6 +134,9 @@ mspacman          // Ms. Pac-Man [1981]
 pacman            // Pac-Man (Midway) [1980]
 pacplus           // Pac-Man Plus [1982]
 vanvan            // Van-Van Car [1983]
+
+@source:knami/pandoras.cpp
+pandoras          // Pandora's Palace [1984]
 
 @source:pacman/pengo.cpp
 pengo             // Pengo (set 1 rev C, encrypted) [1982]
@@ -147,6 +158,9 @@ quantum           // Quantum (rev 2) [1982]
 @source:konami/rocnrope.cpp
 rocnrope          // Roc'n Rope [1983]
 
+@source:sega/segag80r.cpp
+astrob            // Astro Blaster (version 3) [1981]
+
 @source:konami/shaolins.cpp
 kicker            // Kicker [1985]
 
@@ -164,6 +178,9 @@ arknoid2u         // Arkanoid - Revenge of DOH (US) [1987]
 
 @source:konami/tp84.cpp
 tp84              // Time Pilot '84 (set 1) [1984]
+
+@source:toaplan/twincobr.cpp
+fshark            // Flying Shark (World)
 
 @source:sega/vicdual.cpp
 carnivalc         // Carnival (cocktail) [1980]
