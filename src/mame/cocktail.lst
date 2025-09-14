@@ -90,6 +90,7 @@ jackal            // Jackal (World, 8-way Joystick) [1986]
 
 @source:pacman/jrpacman.cpp
 jrpacman          // Jr. Pac-Man (11/9/83) [1983]
+jrpacmanf         // Jr. Pac-Man (speedup hack) [1983]
 
 @source:konami/junofrst.cpp
 junofrst          // Juno First [1983]
@@ -131,7 +132,9 @@ pacmania          // Pac-Mania [1987]
 @source:pacman/pacman.cpp
 maketrax          // Make Trax (US set 1)
 mspacman          // Ms. Pac-Man [1981]
+mspacmnf          // Ms. Pac-Man (speedup hack) [1981]
 pacman            // Pac-Man (Midway) [1980]
+pacmanf           // Pac-Man (Midway, speedup hack) [1980]
 pacplus           // Pac-Man Plus [1982]
 vanvan            // Van-Van Car [1983]
 
