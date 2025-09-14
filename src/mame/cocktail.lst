@@ -61,6 +61,9 @@ dkong3            // Donkey Kong 3 (US) [1983]
 dkongjr           // Donkey Kong Junior (US set F-2) [1982]
 dkongx            // Donkey Kong II: Jumpman Returns (hack, V1.2) [2006]
 
+@source:nintendo/vsnes.cpp
+goonies           // Vs. The Goonies (set E) [1986]
+
 @source:universal/docastle.cpp
 docastle          // Mr. Do's Castle (set 1) [1983]
 jjack             // Jumping Jack [1984]

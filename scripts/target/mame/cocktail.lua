@@ -60,6 +60,7 @@ SOUNDS["YM3812"] = true
 VIDEOS["AVGDVG"] = true
 VIDEOS["BUFSPRITE"] = true
 VIDEOS["MC6845"] = true
+VIDEOS["PPU2C0X"] = true
 VIDEOS["TMS34061"] = true
 VIDEOS["X1_001"] = true
 
@@ -108,6 +109,7 @@ MACHINES["Z80SIO"] = true
 --------------------------------------------------
 
 BUSES["GENERIC"] = true
+BUSES["NES_CTRL"] = true
 
 
 --------------------------------------------------
