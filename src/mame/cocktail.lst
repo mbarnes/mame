@@ -83,6 +83,7 @@ scobras           // Super Cobra (Stern Electronics) [1981]
 gaplus            // Gaplus (GP2 rev. B) [1984]
 
 @source:gottlieb/gottlieb.cpp
+mplanets          // Mad Planets [1983]
 qbert             // Q*bert (US set 1) [1982]
 
 @source:konami/gyruss.cpp
