@@ -68,6 +68,10 @@ goonies           // Vs. The Goonies (set E) [1986]
 docastle          // Mr. Do's Castle (set 1) [1983]
 jjack             // Jumping Jack [1984]
 
+@source:seta/downtown.cpp
+calibr50          // Caliber 50 (Ver. 1.01)
+downtown          // DownTown / Mokugeki (set 1)
+
 @source:namco/galaga.cpp
 digdug            // Dig Dug (rev 2) [1982]
 galaga            // Galaga (Namco rev. B) [1981]
@@ -118,10 +122,12 @@ superpacm         // Super Pac-Man (Midway) [1982]
 todruaga          // The Tower of Druaga (New Ver.) [1984]
 
 @source:midway/mcr.cpp
+dotron            // Discs of Tron (Upright, 10/4/83) [1983]
 journey           // Journey [1983]
 kickc             // Kick (cocktail) [1981]
 shollow           // Satan's Hollow (set 1) [1981]
 solarfox          // Solar Fox (upright) [1981]
+tron              // Tron (8/9) [1982]
 
 @source:universal/mrdo.cpp
 mrdo              // Mr. Do! [1982]
@@ -171,6 +177,10 @@ astrob            // Astro Blaster (version 3) [1981]
 @source:konami/shaolins.cpp
 kicker            // Kicker [1985]
 
+@source:snk/snk.cpp
+ikari             // Ikari Warriors (US JAMMA) [1986]
+victroad          // Victory Road [1986]
+
 @source:sega/system1.cpp
 upndown           // Up'n Down (315-5030) [1983]
 
@@ -181,6 +191,7 @@ tempest           // Tempest (rev 3, Revised Hardware) [1980]
 timeplt           // Time Pilot [1982]
 
 @source:taito/tnzs.cpp
+arkanoidj         // Arkanoid (Japan, newer) [1986]
 arknoid2u         // Arkanoid - Revenge of DOH (US) [1987]
 
 @source:konami/tp84.cpp

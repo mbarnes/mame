@@ -43,12 +43,14 @@ SOUNDS["OKIM6295"] = true
 SOUNDS["POKEY"] = true
 SOUNDS["SN76477"] = true
 SOUNDS["SN76496"] = true
+SOUNDS["SNKWAVE"] = true
 SOUNDS["SP0250"] = true
 SOUNDS["TC8830F"] = true
 SOUNDS["TMS36XX"] = true
 SOUNDS["TMS5110"] = true
 SOUNDS["TMS5220"] = true
 SOUNDS["VOTRAX_SC01"] = true
+SOUNDS["X1_010"] = true
 SOUNDS["YM2151"] = true
 SOUNDS["YM2203"] = true
 SOUNDS["YM3812"] = true
@@ -136,6 +138,7 @@ PROJECTS = {
 	"phoenix",
 	"sega",
 	"seta",
+	"snk",
 	"sunelectronics",
 	"taito",
 	"tecmo",
