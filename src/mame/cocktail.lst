@@ -129,6 +129,9 @@ shollow           // Satan's Hollow (set 1) [1981]
 solarfox          // Solar Fox (upright) [1981]
 tron              // Tron (8/9) [1982]
 
+@source:atari/mhavoc.cpp
+mhavoc            // Major Havoc (rev 3) [1983]
+
 @source:universal/mrdo.cpp
 mrdo              // Mr. Do! [1982]
 
